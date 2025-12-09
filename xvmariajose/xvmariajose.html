@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mis XV Años | María José</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* --- CONFIGURACIÓN BASE (LIQUID GLASS EQUIS DE) --- */
+            :root {
+                /* Colores Liquid Glass - Fondo Oscuro con acentos Rosas/Dorados */
+                --bg-dark: #3e0b24; /* Fondo más oscuro y púrpura */
+                --glass-bg: rgba(255, 255, 255, 0.1);
+                --glass-border: rgba(255, 255, 255, 0.2);
+                --text-color: #ffffff;
+                --accent-pink: #ff69b4; /* Rosa fuerte */
+                --accent-gold: #fecaca; /* Gold/Crema suave */
+                --accent-purple: #8b5cf6;
+                --accent-orange: #ff7f50;
+                --accent-yellow: #969523;
+                --accent-green: #329623;
+            }
+
+            @font-face {
+                font-family: "MatrixBook";
+                src:
+                    url("https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff2")
+                        format("woff2"),
+                    url("https://cdn.jsdelivr.net/gh/YamiVales/Matrix-Book@main/font/Matrix-Book.woff")
+                        format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Matrix-Book;
+                background-color: var(--bg-dark);
+                background-image: url(./fnd/fondoxv.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: repeat;
+                color: var(--text-color);
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow-x: hidden;
+                position: relative;
+            }
+
+            /* --- FONDO ANIMADO (LIQUID BLOBS) --- */
+            .background-blobs {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                overflow: hidden;
+            }
+
+            .blob {
+                position: absolute;
+                border-radius: 50%;
+                filter: blur(80px);
+                opacity: 0.8;
+                animation: moveBlob 20s infinite alternate;
+            }
+
+            .blob-1 {
+                top: -10%;
+                left: -10%;
+                width: 500px;
+                height: 500px;
+                background: var(--accent-green);
+                animation-duration: 25s;
+            }
+
+            .blob-2 {
+                bottom: -10%;
+                right: -10%;
+                width: 400px;
+                height: 400px;
+                background: var(--accent-yellow);
+                animation-duration: 20s;
+            }
+
+            .blob-3 {
+                top: 40%;
+                left: 40%;
+                width: 300px;
+                height: 300px;
+                background: #f0f8ff;
+                animation-duration: 30s;
+            }
+
+            @keyframes moveBlob {
+                0% {
+                    transform: translate(0, 0) scale(1);
+                }
+                100% {
+                    transform: translate(50px, -50px) scale(1.1);
+                }
+            }
+
+            /* --- TARJETA PRINCIPAL (EFECTO LIQUIDO) --- */
+            .glass-container {
+                width: 90%;
+                max-width: 400px;
+                background: var(--glass-bg);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border: 1px solid var(--glass-border);
+                border-radius: 30px;
+                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+                padding: 40px 20px;
+                text-align: center;
+                margin: 20px 0;
+                position: relative;
+                z-index: 10;
+            }
+
+            /* --- TIPOGRAFÍA Y NOMBRE (Efecto Glass) --- */
+            h1 {
+                font-family: "Great Vibes", cursive;
+                font-size: 3.8rem;
+                margin: 10px 0;
+                background: linear-gradient(
+                    45deg,
+                    var(--accent-gold),
+                    var(--accent-pink)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                line-height: 1.2;
+                text-shadow:
+                    -1px -1px 0 rgba(255, 255, 255, 0.3),
+                    1px 1px 0 rgba(0, 0, 0, 0.3),
+                    /* Sombra oscura para efecto 3D */ 0 0 10px
+                        rgba(255, 255, 255, 0.5); /* Brillo blanco sutil */
+            }
+
+            .super-title {
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 0.8rem;
+                opacity: 0.8;
+                color: var(--accent-gold);
+                font-weight: 500;
+            }
+
+            /* --- Padrinos / Secciones de Texto --- */
+            .section-title {
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                margin-top: 30px;
+                margin-bottom: 5px;
+                color: var(--accent-pink);
+                font-weight: 700;
+            }
+            .padrinos-section p {
+                font-size: 0.9rem;
+                opacity: 0.9;
+                margin: 5px 0;
+            }
+
+            /* --- FOTO DE PERFIL --- */
+            .photo-frame {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto 20px;
+                border-radius: 50%;
+                padding: 5px;
+                background: linear-gradient(
+                    45deg,
+                    var(--accent-pink),
+                    var(--accent-gold)
+                );
+                position: relative;
+            }
+
+            .photo-frame img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 4px solid rgba(255, 255, 255, 0.2);
+                display: block;
+            }
+
+            /* --- CONTADOR --- */
+            .countdown {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin: 30px 0;
+            }
+
+            .time-box {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 12px;
+                padding: 10px;
+                min-width: 55px;
+                backdrop-filter: blur(5px);
+            }
+
+            .time-box span {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--accent-pink);
+            }
+
+            .time-box small {
+                font-size: 0.6rem;
+                text-transform: uppercase;
+                opacity: 0.7;
+            }
+
+            /* --- LISTA DE DETALLES --- */
+            .details-list {
+                list-style: none;
+                padding: 0;
+                margin: 30px 0;
+                text-align: left;
+            }
+
+            .detail-item {
+                background: rgba(255, 255, 255, 0.03);
+                margin-bottom: 15px;
+                padding: 15px;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                border-left: 3px solid var(--accent-gold);
+                transition: transform 0.2s;
+            }
+
+            .icon {
+                font-size: 1.5rem;
+                margin-right: 15px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+            }
+
+            /* --- SECCIÓN DE CARRUSEL/GALERÍA --- */
+            .gallery-carousel {
+                margin: 30px 0;
+                position: relative;
+                overflow: hidden; /* Oculta las imágenes que no están visibles */
+                border-radius: 20px;
+                border: 1px solid var(--glass-border);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .carousel-images {
+                display: flex;
+                transition: transform 0.5s ease-in-out; /* Animación de deslizamiento */
+            }
+
+            .carousel-images img {
+                width: 100%;
+                height: 300px; /* Altura fija para el carrusel */
+                object-fit: cover;
+                flex-shrink: 0; /*para que no se encojan */
+                border-radius: 20px;
+            }
+
+            .carousel-nav {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
+                padding: 0 10px;
+            }
+
+            .nav-btn {
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 1.2rem;
+                z-index: 20;
+                transition: background 0.3s;
+            }
+
+            .nav-btn:hover {
+                background: var(--accent-pink);
+            }
+
+            /* --- BOTONES Y FOOTER --- */
+            .btn {
+                display: block;
+                width: 100%;
+                padding: 16px 0;
+                margin: 10px 0;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn-whatsapp {
+                background: linear-gradient(90deg, #25d366, #128c7e);
+                color: white;
+                box-shadow: 0 4px 15px rgba(63, 145, 93, 0.4);
+            }
+
+            .btn-secondary {
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                color: white;
+            }
+
+            .btn-gold {
+                background: linear-gradient(90deg, var(--accent-gold), #ffd700);
+                color: var(--bg-dark);
+                font-weight: 700;
+                box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <div class="glass-container">
+            <p
+                style="
+                    font-family: &quot;Great Vibes&quot;, cursive;
+                    font-size: 1.5rem;
+                    margin-top: 0;
+                "
+            >
+                Con la bendición de Dios y mi familia...
+            </p>
+
+            <div class="super-title">Mis XV Años</div>
+            <h1>María José</h1>
+
+            <div class="photo-frame">
+                <img src="fotoxv.jpg" alt="Quinceañera María José" />
+            </div>
+
+            <p style="font-size: 1.5rem; opacity: 0.9; margin-bottom: 30px">
+                Los invito a compartir conmigo este día tan especial.
+            </p>
+
+            <div class="padrinos-section">
+                <h2 class="section-title">✨ Mis Padrinos ✨</h2>
+                <p>Porfirio Alberto Bolaina Gerónimo</p>
+                <p>Esmeralda de la Cruz García</p>
+            </div>
+            <div class="padrinos-section">
+                <h2 class="section-title">🥂 Brindis 🥂</h2>
+                <p>José Domingo Bolaina Gerónimo</p>
+                <p>Glenda del Carmen de la Cruz Rodríguez</p>
+            </div>
+
+            <h2 class="section-title" style="margin-bottom: 10px">
+                Cuenta Regresiva
+            </h2>
+            <div class="countdown" id="timer">
+                <div class="time-box">
+                    <span id="days">00</span><small>Días</small>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span><small>Hrs</small>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span><small>Min</small>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span><small>Seg</small>
+                </div>
+            </div>
+
+            <h2 class="section-title">📸 Sesión de fotos 📸</h2>
+            <div class="gallery-carousel">
+                <div class="carousel-images" id="carousel-images">
+                    <img src="FOTO.jpeg" alt="Foto 1" />
+                    <img src="FOTO2.jpeg" alt="Foto 2" />
+                    <img src="FOTO3.jpeg" alt="Foto 3" />
+                    <img src="FOTO4.jpeg" alt="Foto 4" />
+                    <img src="FOTO5.jpeg" alt="Foto 5" />
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn" onclick="moveCarousel(-1)">
+                        &#10094;
+                    </button>
+                    <button class="nav-btn" onclick="moveCarousel(1)">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+
+            <h2 class="section-title">📍 Detalles del Evento</h2>
+            <ul class="details-list">
+                <li class="detail-item">
+                    <div class="icon" style="color: var(--accent-pink)">⛪</div>
+                    <div>
+                        <strong
+                            style="display: block; color: var(--accent-gold)"
+                            >Misa - 6:00 pm</strong
+                        >
+                        <span style="font-size: 0.85rem; opacity: 0.8"
+                            >Parroquia Ntra. Sra. Del Carmen, Pto. de
+                            Chiltepec</span
+                        >
+                    </div>
+                </li>
+                <li class="detail-item">
+                    <div class="icon" style="color: var(--accent-pink)">🥂</div>
+                    <div>
+                        <strong
+                            style="display: block; color: var(--accent-gold)"
+                            >Recepción - 8:00 pm</strong
+                        >
+                        <span style="font-size: 0.85rem; opacity: 0.8"
+                            >Palapa "LAS 4 HERMANAS" Ejido Chiltepec, Secc.
+                            Tanques</span
+                        >
+                    </div>
+                </li>
+            </ul>
+
+            <a
+                href="https://wa.me/5219934596440?text=Hola,%20María%20José!%20Confirmo%20mi%20asistencia%20a%20tus%20XV%20años."
+                class="btn btn-whatsapp"
+            >
+                Confirma tu asistencia
+            </a>
+
+            <a
+                href="https://maps.app.goo.gl/1z5nCUMEW7tCVUEm9"
+                class="btn btn-secondary"
+            >
+                Ver Ubicación (Mapa)
+            </a>
+
+            <p
+                id="regalos"
+                style="
+                    font-size: 0.9rem;
+                    opacity: 0.9;
+                    margin-top: 30px;
+                    font-weight: 500;
+                "
+            >
+                Si deseas hacerme un presente, lo más importante es tu
+                presencia, pero también acepto **Lluvia de Sobres**.
+            </p>
+            <p style="font-size: 0.9rem; opacity: 0.9; margin: 5px 0">
+                ¡TE ESPERAMOS!
+            </p>
+        </div>
+
+        <script>
+            // Lógica del Contador
+            const fechaEvento = new Date(
+                "December 27, 2025 18:00:00",
+            ).getTime();
+
+            const x = setInterval(function () {
+                const ahora = new Date().getTime();
+                const distancia = fechaEvento - ahora;
+
+                const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+                const horas = Math.floor(
+                    (distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+                );
+                const minutos = Math.floor(
+                    (distancia % (1000 * 60 * 60)) / (1000 * 60),
+                );
+                const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+                // Asegura que los IDs existen antes de intentar actualizarlos
+                if (document.getElementById("days"))
+                    document.getElementById("days").innerText = dias;
+                if (document.getElementById("hours"))
+                    document.getElementById("hours").innerText =
+                        horas < 10 ? "0" + horas : horas;
+                if (document.getElementById("minutes"))
+                    document.getElementById("minutes").innerText =
+                        minutos < 10 ? "0" + minutos : minutos;
+                if (document.getElementById("seconds"))
+                    document.getElementById("seconds").innerText =
+                        segundos < 10 ? "0" + segundos : segundos;
+
+                if (distancia < 0) {
+                    clearInterval(x);
+                    if (document.getElementById("timer"))
+                        document.getElementById("timer").innerHTML =
+                            "<h3 style='color:var(--accent-pink)'>¡FELICIDADES!</h3>";
+                }
+            }, 1000);
+
+            // Lógica del Carrusel de Imágenes
+            let currentIndex = 0;
+            const carousel = document.getElementById("carousel-images");
+            // Usar setTimeout para revisar que esté cargado el dato
+            setTimeout(() => {
+                if (carousel) {
+                    const totalImages = carousel.children.length;
+
+                    window.moveCarousel = function (direction) {
+                        currentIndex =
+                            (currentIndex + direction + totalImages) %
+                            totalImages;
+                        const offset = -currentIndex * 100;
+                        carousel.style.transform = `translateX(${offset}%)`;
+                    };
+                }
+            }, 0);
+        </script>
+    </body>
+</html>

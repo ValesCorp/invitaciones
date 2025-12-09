@@ -1,0 +1,629 @@
+@import url(".././fuentes/Matrix-Book/css/Matrix-Book.css");
+@import url(".././fuentes/SFProDisplay/sfpro.css");
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.ui.sidebar.menu {
+    padding-bottom: 100%;
+}
+
+.ui.menu .item img.logo {
+    margin-right: 1.5em;
+}
+.main.container {
+    margin-top: 7em;
+}
+
+.wireframe {
+    margin-top: 2em;
+}
+.ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+}
+
+.seccion {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.grande {
+    font-size: 80pt;
+}
+
+.mediano {
+    font-size: 50pt;
+}
+
+p.grande {
+    padding-right: 30%;
+    line-height: 1;
+}
+
+.cabecera.ui {
+    padding-top: 10%;
+}
+
+.cabecera.ui h1 {
+    font-size: 4cap;
+    line-height: 1.5cap;
+    padding-left: 2cap;
+    padding-right: 2cap;
+}
+
+#titulo1 {
+    font-size: 30px;
+}
+
+#titulo2 {
+    font-size: 65px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.texto {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#principal {
+    font-family: "Matrix-Book";
+    font-size: x-large;
+    font-weight: bold;
+    padding-left: 0.5cap;
+}
+
+.enlace:hover {
+    text-decoration: underline;
+    text-decoration-color: #4183c4;
+}
+
+#tarjetas {
+    padding-top: 5%;
+}
+
+#pequenaEmpresa,
+#granEmpresa,
+#educacionEscuela {
+    border-radius: 50px;
+}
+
+#pequenaEmpresa h3,
+#granEmpresa h3,
+#educacionEscuela h3 {
+    padding-top: 5%;
+    font-size: 3.5cap;
+}
+
+#botontarjeta {
+    padding-top: 100%;
+    padding-bottom: 10%;
+}
+
+#pequenaEmpresa {
+    background-image: url(".././img/pequena.jpg");
+    background-size: cover;
+}
+
+#granEmpresa {
+    background-image: url(".././img/grande.jpg");
+    background-size: cover;
+}
+
+#educacionEscuela {
+    background-image: url(".././img/educacion.jpg");
+    background-size: cover;
+}
+
+#soporte {
+    background-image: url(".././img/mantenimiento.jpg");
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 65%;
+    margin-left: 9px;
+}
+#implementacion {
+    background-image: url(".././img/implementacion.jpg");
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 60%;
+    margin-right: 9px;
+}
+
+#capacitaciones {
+    background-image: url(".././img/capacitaciones.jpg");
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 66%;
+    margin-left: 9px;
+}
+#opensource {
+    background-image: url(".././img/opensource.jpg");
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 63%;
+    margin-right: 9px;
+}
+
+.cabecera.ui h2 {
+    font-weight: 400;
+    line-height: 2cap;
+    margin-bottom: 0cap;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.botones {
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
+.ui.button {
+    font-weight: 400;
+}
+
+#textoDesarrollo {
+    font-size: 30pt;
+    line-height: 1.1;
+    font-weight: 600;
+    padding-right: 15%;
+}
+
+#contactoExperto {
+    font-size: 22pt;
+    padding-bottom: 10%;
+}
+
+.banner.ui.segment {
+    box-shadow: inset 0 0 0 1000px #00000054;
+}
+
+#bannerDesarrollo {
+    background-image: url(".././img/banner-desarrollo.jpg");
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#bannerMarketing {
+    background-image: url("../img/mercadeodigital.jpg");
+    background-size: cover;
+    padding-bottom: 10%;
+}
+
+#bannerMarketing > .ui.container {
+    padding-right: 35%;
+    padding-top: 5%;
+}
+
+#bannerMarketing h1 {
+    line-height: 1;
+    font-weight: 600;
+}
+
+#bannerMarketing p {
+    font-size: 19pt;
+    line-height: 1.381;
+}
+
+#marketingTexto {
+    padding-bottom: 5%;
+}
+
+#descripcionMarketing .cuadro {
+    background-color: #000000;
+}
+
+#bocadito {
+    background-color: #f2f2f2;
+}
+
+#bocadito .ui.container {
+    padding-top: 3%;
+}
+
+#infoDesarrollo {
+    padding-top: 10%;
+}
+
+.textos {
+    padding-top: 5%;
+}
+
+.texto.mediano {
+    font-size: 18pt;
+}
+
+#tec {
+    padding-right: 25%;
+}
+
+.enlace {
+    text-decoration-color: #4183c4;
+}
+
+#encabezado {
+    background-color: #134f5c;
+}
+
+#pie {
+    background-color: whitesmoke;
+    color: #000000;
+    margin-top: 0cap;
+}
+
+#pieInvertido {
+    background-color: black;
+}
+
+.title {
+    padding-top: 1em;
+}
+
+#cerrar {
+    float: right;
+}
+
+#atras {
+    float: left;
+}
+
+/*secondhead es la propiedad del menú para las subpáginas, masthead es para el index*/
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+}
+
+.hidden.menu {
+    display: none;
+}
+
+.masthead.menu {
+    margin-top: 0%;
+}
+
+.secondary.menu {
+    position: relative;
+}
+
+.sub.menu {
+    padding-top: 3%;
+}
+
+.masthead.segment {
+    min-height: 396px;
+    padding: 0em 0em;
+}
+
+.secondhead.segment {
+    min-height: 300px;
+    padding: 1em 0em;
+}
+
+.thirdhead.segment {
+    min-height: 100px;
+    padding: 1em 0em;
+    margin-bottom: 1em;
+}
+
+.masthead .logo.item img {
+    margin-right: 1em;
+}
+
+.secondhead .logo.item img {
+    margin-right: 1em;
+}
+
+.thirdhead .logo.item img {
+    margin-right: 1em;
+}
+
+.masthead .ui.menu .ui.button {
+    margin-left: 0.5em;
+}
+
+.secondhead .ui.menu .ui.button {
+    margin-left: 0.5em;
+}
+
+.thirdhead .ui.menu .ui.button {
+    margin-left: 0.5em;
+}
+
+.masthead h1.ui.header {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-size: 350%;
+    font-weight: normal;
+}
+
+.secondhead h1.ui.header {
+    margin-top: 2em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.thirdhead h1.ui.header {
+    margin-top: 0.1em;
+    margin-bottom: 0em;
+    padding-bottom: 0.2em;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.masthead h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+.secondhead h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+    margin-left: 0%;
+}
+
+.thirdhead h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+.ui.vertical.stripe {
+    padding: 8em 0em;
+}
+
+.ui.vertical.stripe h3 {
+    font-size: 2em;
+}
+
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+    margin-top: 3em;
+}
+
+.ui.vertical.stripe .floated.image {
+    clear: both;
+}
+
+.ui.vertical.stripe p {
+    font-size: 1.33em;
+}
+
+.ui.vertical.stripe .horizontal.divider {
+    margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+    padding: 0em;
+}
+
+.quote.stripe.segment .grid .column {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.footer.segment {
+    padding: 5em 0em;
+}
+/*comportamiento del menú*/
+.ui.menu .toc.item {
+    display: none;
+}
+
+.ui.sidebar.menu .item {
+    padding-left: 15%;
+    font-size: x-large;
+    padding-bottom: 0%;
+}
+
+.edicion h1 {
+    font-size: 3em;
+    line-height: 10%;
+}
+
+.edicion h2 {
+    font-size: 1.5em;
+    line-height: 50%;
+}
+
+.precio {
+}
+
+.contenido {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+}
+
+.padre {
+    display: table; /* Make the container element behave like a table */
+    width: 100%;
+}
+
+.hijo {
+    display: table-cell;
+}
+
+/*#cuadros {
+    padding-left: 3%;
+    padding-right: 3%;
+}*/
+
+.titulo {
+    font-family: Arial, sans-serif; /* O una fuente similar */
+    font-weight: bold;
+    color: white; /* Texto en blanco */
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+svg text {
+    fill: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000; /* Contorno negro */
+}
+
+/* Manipula las vistas para móvil y resolucioness similares */
+@media only screen and (max-width: 700px) {
+    /* .ui.fixed.menu { */
+    /*     display: block !important; */
+    /* } */
+
+    .textos.ui.container {
+        padding-top: 20%;
+    }
+
+    .texto.mediano {
+        font-size: 15pt;
+    }
+
+    .texto {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .grande {
+        font-size: 30pt;
+    }
+
+    .mediano {
+        font-size: 25pt;
+    }
+
+    #bannerMarketing p {
+        font-size: 12pt;
+        line-height: 1;
+    }
+
+    #marketingTexto {
+        font-weight: 400;
+    }
+
+    #textoDesarrollo {
+        font-size: 15pt;
+        line-height: 1.1;
+        font-weight: 400;
+        padding-right: 15%;
+    }
+
+    #contactoExperto {
+        font-size: 12pt;
+        padding-bottom: 10%;
+    }
+
+    .cabecera.ui {
+        padding-top: 20%;
+    }
+
+    .cabecera.ui h1 {
+        font-size: 3cap;
+        font-weight: bold;
+    }
+
+    .cabecera.ui h2 {
+        font-size: 1.8cap;
+        font-weight: lighter;
+        line-height: 2cap;
+    }
+
+    #titulo1 {
+        font-size: 20px;
+    }
+
+    #titulo2 {
+        font-size: 30px;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    #texto {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #soporte {
+        background-size: cover;
+        padding-top: 10%;
+        padding-bottom: 65%;
+        margin-left: 0%;
+    }
+    #implementacion {
+        background-size: cover;
+        padding-top: 10%;
+        padding-bottom: 60%;
+        margin-right: 0%;
+    }
+
+    #capacitaciones {
+        background-size: cover;
+        padding-top: 10%;
+        padding-bottom: 65%;
+        margin-left: 0%;
+    }
+    #opensource {
+        background-size: cover;
+        padding-top: 10%;
+        padding-bottom: 60%;
+        margin-right: 0%;
+    }
+
+    .primary.pointing.menu .item,
+    .primary.pointing.menu .menu {
+        display: none;
+    }
+
+    .ui.menu .toc.item {
+        display: block;
+    }
+
+    .masthead.segment {
+        min-height: 350px;
+    }
+
+    .secondhead.segment {
+        min-height: 250px;
+    }
+
+    .thirdhead.segment {
+        min-height: 100px;
+    }
+
+    .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+    }
+
+    .secondhead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+    }
+
+    .thirdhead h1.ui.header {
+        font-size: 2em;
+        margin-top: 0.5em;
+    }
+
+    .secondhead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+    }
+
+    .thirdhead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+    }
+
+    .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+    }
+}
