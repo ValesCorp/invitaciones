@@ -44,7 +44,7 @@ body {
     padding: 0;
     font-family: Matrix-Book;
     background-color: var(--bg-dark);
-    background-image: url(.././img/fondoxv.png);
+    background-image: url(".././img/fondoxv.png");
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
